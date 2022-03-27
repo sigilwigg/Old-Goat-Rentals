@@ -1,0 +1,152 @@
+/* ========== ROOT ========== */
+/* #region root */
+:root {
+    --color-bg: black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--color-bg);
+}
+
+section {
+    position: relative;
+    height: 80vh;
+}
+/* #endregion */
+
+/* ========== HEADER ========== */
+/* #region navbar-nav override */
+.navbar-nav {
+    justify-content: center!important;
+}
+
+.navbar-nav .nav-item:nth-last-child(1) {
+    margin-left: auto;
+}
+.navbar-nav .spacer{
+    visibility: hidden;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-nav {
+        align-items: flex-end;
+    }
+
+    .navbar-nav .nav-item {
+        padding-right: .75rem;
+    }
+
+    .navbar-nav .spacer {
+        display: none;
+    }
+}
+/* #endregion */
+
+/* #region navbar-toggler override */
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+.navbar-dark .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0 );
+}
+/* #endregion */
+
+/* #region logo */
+a.navbar-brand {
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    width: 12rem;
+    transform: translateY(-25%);
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 8rem;
+        transform: translateY(-30%);
+    }
+}
+/* #endregion */
+
+/* ========== Landing ========== */
+/* #region landing */
+#landing {
+    position: relative;
+    z-index: 0;
+    background-image: url("../images/ocean-bg-flip.jpg");
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    overflow: hidden;
+}
+
+#landing .black-fade {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(0deg, black 0%, rgba(48,48,48,0) 10%);
+}
+
+#landing .container {
+    z-index: 2;
+}
+
+#landing div:nth-child(2) {
+    z-index: 2;
+}
+
+#landing {
+    letter-spacing: .15rem;
+    font-family: 'Gideon Roman', cursive;
+    color: white;
+}
+
+.title-card {
+    text-align: right;
+    align-self: flex-end;
+    margin-bottom: 4rem;
+}
+
+.title-card h1 {
+    font-size: calc(3rem + 1.5vw)
+}
+
+.lead {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 320px) {
+    .title-card h1 {
+    font-size: calc(2rem + 1.5vw)
+}
+    .lead {
+        font-size: .85rem;
+    }
+}
+
+@media screen and (max-width: 809px) {
+    #landing {
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title-card {
+        text-align: right;
+        margin-right: auto;
+        margin-top: 8rem;
+    }
+}
+/* #endregion */
