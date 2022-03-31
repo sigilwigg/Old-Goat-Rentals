@@ -30,7 +30,7 @@
 <body>
 
     <!-- #region navbar -->
-    <nav class="container navbar navbar-expand-md navbar-dark fixed-top">
+    <nav id="navbar" class="container navbar navbar-expand-md navbar-dark fixed-top rounded-bottom">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="./images/old-goat-logo.png" alt="old-goat-logo" class="logo">
@@ -41,19 +41,19 @@
             </button>
             <ul class="navbar-nav collapse navbar-collapse me-auto mb-2 mb-md-0" id="navbarCollapse">
                 <li class="nav-item fs-4 spacer">
-                    <a href="#">Book Now!</a>
+                    <a href="#">Book</a>
+                </li>
+                <li class="nav-item fs-4 mx-3">
+                    <a class="nav-link active" aria-current="page" href="#about-us">About Us</a>
+                </li>
+                <li class="nav-item fs-4 mx-3">
+                    <a class="nav-link active" href="#carousel-section">Cars</a>
+                </li>
+                <li class="nav-item fs-4 mx-3">
+                    <a class="nav-link active" href="#video-map">Camping</a>
                 </li>
                 <li class="nav-item fs-4">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item fs-4">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item fs-4">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item fs-4">
-                    <a class="nav-link" href="#">Book Now!</a>
+                    <a class="nav-link btn btn-outline-primary" href="#">Book Now!</a>
                 </li>
             </ul>
         </div>
@@ -76,6 +76,162 @@
     </section>
     <!-- #endregion -->
 
+    <!-- #region about -->
+    <div id="#about-us" class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold">Who Are We?</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">We are a family-run, local car rental company that specializes in providing used
+                vehicles as an eco-friendly and cost-effective option for your vacation needs!</p>
+        </div>
+    </div>
+
+    <div class="container px-4 py-5" id="how-it-works">
+        <h2 class="pb-2 border-bottom">How Does It Work?</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="col d-flex align-items-start">
+                <div>
+                    <h2>Step 1: Book The Car</h2>
+                    <p>Our "Book Now" button will take you to our Outdoorsy.com profilewhere you can select your desired
+                        car and any accessories you need for your stay on Maui.</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div>
+                    <h2>Step 2: Pick It Up When You Land</h2>
+                    <p>We will prepare everything for you! We fill the tank and leave the car for you to pick up at the
+                        Airport (convenient!).</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div>
+                    <h2>Step 3: Enjoy Maui</h2>
+                    <p>Explore the island! When you take the car to the airport to fly home, just park the car in the
+                        airport parking lot with a full tank and send us a picture of the car's location. That's it!
+                        Done!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region carousel -->
+    <div id="carousel-section" class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center">
+            <!-- #region carousel -->
+            <div id="carousel" class="col-lg-6">
+                <div id="myCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class=""
+                            aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+                            class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"
+                            class=""></button>
+                    </div>
+                    <div class="carousel-inner h-100 py-5 angle-clip">
+                        <div class="carousel-item">
+                            <div class="carousel-img img-1" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                            </div>
+
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <p class="gideon-font">Book used cars at affordable prices for your stay
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item active">
+                            <div class="carousel-img img-2" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                            </div>
+
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <p class="gideon-font">Have it ready to go at the airport when you arrive
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-img img-3" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                            </div>
+
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <p class="gideon-font">Rent a car-top tent and camp all over Maui
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!-- #endregion -->
+
+            <!-- #region header -->
+            <div class="col-lg-6">
+                <h2 class="display-5 fw-bold lh-1 mb-3">Local Cars,</h2>
+                <h2 class="display-5 fw-bold lh-1 mb-3">Local Flavor</h2>
+                <p class="lead">Enjoy the best in used vehicle rentals. We have a few different options to suit
+                    your style. Our
+                    fleet currently consists of Honda CRVs and Ford Rangers.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a class="nav-link btn btn-outline-primary" href="#">Book Now!</a>
+                </div>
+            </div>
+            <!-- #endregion -->
+        </div>
+    </div>
+
+
+    <!-- #endregion -->
+
+    <!-- #region video-map -->
+    <section id="video-map">
+        <div class="black-fade flip"></div>
+        <div class="container h-100">
+            <div class="row flex-md-row align-items-center h-100 text-light">
+                <div class="col-md h-50 video-container">
+                    <iframe width="100%" src="https://www.youtube.com/embed/1m5BtIjJxY4" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="col-md mt-0 title-card mr-2">
+                    <h2 class="display-5 fw-bold lh-1 mb-3">What is Car Camping?</h2>
+                    <p class="lead">Behold! The Venture Forward Tent: the perfect portable tent! All of our vehicles can
+                        be rented with this optional tent along with a full set of gear for
+                        everthing you need to go camping!</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a class="nav-link btn btn-outline-primary" href="#">Book Now!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- #endregion -->
+
+    <!-- #region footer -->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top text-light">
+            <div class="col-md-4 d-flex align-items-center">
+                <span class="text-muted">© 2021 Old Goat Rentals</span>
+            </div>
+        </footer>
+    </div>
+    <!-- #endregion -->
 </body>
 
 <!-- #region scripts -->
@@ -85,7 +241,7 @@
     crossorigin="anonymous"></script>
 
 <!-- my scripts -->
-<!-- <script src="./js/nav-scroll.js"></script> -->
+<script src="./js/nav-scroll.js"></script>
 <!-- #endregion -->
 
 </html>

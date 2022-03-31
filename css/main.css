@@ -3,7 +3,9 @@
 :root {
     --color-bg: black;
 }
+/* #endregion */
 
+/* #region general */
 body {
     margin: 0;
     padding: 0;
@@ -14,10 +16,44 @@ section {
     position: relative;
     height: 80vh;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+    font-family: 'Gideon Roman', cursive;
+}
+
+p {
+    color: white;
+}
+
+.gideon-font {
+    font-family: 'Gideon Roman', cursive;
+}
+/* #endregion */
+
+/* #region black fades */
+.black-fade {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(0deg, black 0%, rgba(48,48,48,0) 10%);
+}
+
+.black-fade.flip {
+    transform: rotate(180deg);
+}
 /* #endregion */
 
 /* ========== HEADER ========== */
 /* #region navbar-nav override */
+.navbar {
+    transition: 400ms ease-in-out;
+}
+
 .navbar-nav {
     justify-content: center!important;
 }
@@ -76,7 +112,7 @@ a.navbar-brand {
 }
 /* #endregion */
 
-/* ========== Landing ========== */
+/* ========== LANDING ========== */
 /* #region landing */
 #landing {
     position: relative;
@@ -88,15 +124,9 @@ a.navbar-brand {
     background-size: cover;
     height: 80vh;
     overflow: hidden;
-}
-
-#landing .black-fade {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: linear-gradient(0deg, black 0%, rgba(48,48,48,0) 10%);
+    letter-spacing: .15rem;
+    font-family: 'Gideon Roman', cursive;
+    color: white;
 }
 
 #landing .container {
@@ -107,13 +137,7 @@ a.navbar-brand {
     z-index: 2;
 }
 
-#landing {
-    letter-spacing: .15rem;
-    font-family: 'Gideon Roman', cursive;
-    color: white;
-}
-
-.title-card {
+#landing .title-card {
     text-align: right;
     align-self: flex-end;
     margin-bottom: 4rem;
@@ -129,8 +153,8 @@ a.navbar-brand {
 
 @media screen and (max-width: 320px) {
     .title-card h1 {
-    font-size: calc(2rem + 1.5vw)
-}
+        font-size: calc(2rem + 1.5vw)
+    }
     .lead {
         font-size: .85rem;
     }
@@ -148,5 +172,96 @@ a.navbar-brand {
         margin-right: auto;
         margin-top: 8rem;
     }
+}
+/* #endregion */
+
+/* ========== ABOUT ========== */
+/* region about */
+#about-us h1, #about-us p,
+#how-it-works h2, #how-it-works p {
+    color: white;
+}
+/* #endregion */
+
+/* ========== CAROUSEL ========== */
+/* #region carousel */
+#carousel-section {
+    color: white;
+}
+
+#carousel {
+    height: 80vh;
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-caption {
+    right: 15%;
+    bottom: 0rem;
+    left: 15%;
+    width: 60%;
+}
+
+.angle-clip {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+}
+.carousel-img.img-1 {
+    background: url("../images/carousel/cars-1.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.carousel-img.img-2 {
+    background: url("../images/carousel/cars-2.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.carousel-img.img-3 {
+    background: url("../images/carousel/cars-3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* #endregion */
+
+/* ========== VIDEO-MAP ========== */
+/* #region video */
+#video-map {
+    position: relative;
+    z-index: 0;
+    background-image: url('../images/bamboo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#video-map .black-fade {
+    z-index: 1;
+    background: linear-gradient(0deg, black 0%, rgba(48,48,48,0) 100%);
+}
+
+#video-map .title-card {
+    z-index: 2;
+    text-align: left;
+    margin-bottom: 4rem;
+}
+
+#video-map .video-container {
+    z-index: 2;
+}
+
+#video-map iframe {
+    height: 100%;
 }
 /* #endregion */
